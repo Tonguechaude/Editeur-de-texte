@@ -30,4 +30,18 @@ public class Document {
         String partieDroite = texte.substring(fin + 1);
         texte = partieGauche + remplacement + partieDroite;
     }
+
+    public void majuscule(int debut, int fin){
+        if (debut < 0 || fin > texte.length() || debut > fin) {
+            System.err.println("Indices invalides");
+            return;
+        }
+        String partieGauche = texte.substring(0, debut);
+        String partieAMettreEnMajuscules = texte.substring(debut, fin + 1);
+        String partieDroite = texte.substring(fin + 1);
+
+        String partieEnMajuscules = partieAMettreEnMajuscules.toUpperCase();
+
+        texte = partieGauche + partieEnMajuscules + partieDroite;
+    }
 }
