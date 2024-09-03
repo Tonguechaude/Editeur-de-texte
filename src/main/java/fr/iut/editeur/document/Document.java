@@ -44,4 +44,15 @@ public class Document {
 
         texte = partieGauche + partieEnMajuscules + partieDroite;
     }
+
+    public void effacer (int debut, int fin){
+        if (debut < 0 || fin > texte.length() || debut > fin) {
+            System.err.println("Indices invalides");
+            return;
+        }
+        String partieGauche = texte.substring(0, debut);
+        String partieDroite = texte.substring(fin + 1);
+        texte = partieGauche + partieDroite;
+    }
+
 }
