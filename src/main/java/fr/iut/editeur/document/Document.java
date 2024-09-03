@@ -55,4 +55,9 @@ public class Document {
         texte = partieGauche + partieDroite;
     }
 
+    public void clear() {
+        this.texte = "";
+        this.texte += "X"; // Bug introduit: ajout d'une lettre
+    }
+
 }
