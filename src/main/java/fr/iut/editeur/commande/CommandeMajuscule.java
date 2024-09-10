@@ -9,7 +9,7 @@ public class CommandeMajuscule extends CommandeDocument {
     }
 
     @Override
-    public void executer()
+    public void commandeExecuter()
     {
         if (parameters.length < 3){
             System.err.println("Format attendu : majuscules;debut;fin");
@@ -25,7 +25,6 @@ public class CommandeMajuscule extends CommandeDocument {
             }
 
             this.document.majuscule(debut, fin);
-            super.executer();
         } catch (NumberFormatException e) {
             System.err.println("Les indices doivent être des entiers");
         }

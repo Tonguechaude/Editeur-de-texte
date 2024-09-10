@@ -9,7 +9,7 @@ public class CommandeEffacer extends CommandeDocument {
     }
 
     @Override
-    public void executer() {
+    public void commandeExecuter() {
         if (parameters.length < 3) {
             System.err.println("Format attendu : effacer;debut;fin");
             return;
@@ -25,7 +25,6 @@ public class CommandeEffacer extends CommandeDocument {
             }
 
             this.document.effacer(debut, fin);
-            super.executer();
         } catch (NumberFormatException e) {
             System.err.println("Les indices doivents être des entiers");
         }

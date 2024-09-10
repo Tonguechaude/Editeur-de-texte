@@ -10,7 +10,7 @@ public class CommandeRemplacer extends CommandeDocument {
     }
 
     @Override
-    public void executer() {
+    public void commandeExecuter() {
         if(parameters.length < 3 || parameters.length > 4) {
             System.err.println("Format attendu : remplacer;début;fin[,chaîne]");
             return;
@@ -26,7 +26,6 @@ public class CommandeRemplacer extends CommandeDocument {
             }
 
             this.document.remplacer(debut, fin, remplacement);
-            super.executer();
         } catch (NumberFormatException e) {
             System.err.println("Les indices doivent être des entiens");
         }
