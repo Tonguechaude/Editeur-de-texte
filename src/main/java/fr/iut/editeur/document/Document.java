@@ -57,7 +57,6 @@ public class Document {
 
     public void clear() {
         this.texte = "";
-        this.texte += "X"; // Bug introduit: ajout d'une lettre
     }
 
 }
