@@ -59,4 +59,8 @@ public class Document {
         this.texte = "";
     }
 
+    public void inserer(int debut, String texte) {
+        this.remplacer(debut +1, debut, texte);
+    }
+
 }
