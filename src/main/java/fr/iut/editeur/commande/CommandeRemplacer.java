@@ -4,11 +4,19 @@ import fr.iut.editeur.document.Document;
 
 public class CommandeRemplacer extends CommandeDocument {
 
-
+    /**
+     *
+     * @param document
+     * @param parameters
+     * Simple constructeur appellant la classe mere CommandeDocument
+     */
     public CommandeRemplacer(Document document, String[] parameters) {
         super(document, parameters);
     }
 
+    /**
+     * implementation d'une methode permettant d'executer les commandes
+     */
     @Override
     public void commandeExecuter() {
         if(parameters.length < 3 || parameters.length > 4) {

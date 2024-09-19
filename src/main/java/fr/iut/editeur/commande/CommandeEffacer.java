@@ -4,10 +4,19 @@ import fr.iut.editeur.document.Document;
 
 public class CommandeEffacer extends CommandeDocument {
 
+    /**
+     *
+     * @param document
+     * @param parameters
+     * Simple constructeur appellant la classe mere CommandeDocument
+     */
     public CommandeEffacer(Document document, String[] parameters) {
         super(document, parameters);
     }
 
+    /**
+     * implpementation de la methode abstraite de Commande Document
+     */
     @Override
     public void commandeExecuter() {
         if (parameters.length < 3) {
@@ -29,10 +38,4 @@ public class CommandeEffacer extends CommandeDocument {
             System.err.println("Les indices doivents être des entiers");
         }
     }
-
-
-
-
-
-
 }
